@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Queue Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+        .message, .error {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .message {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hospital Queue Management</h1>
+
+    <!-- Display Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <!-- Queue Table -->
+    <h2>Current Queue</h2>
+    {% if queue %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Queue Position</th>
+                    <th>Queue Length</th>
+                    <th>Predicted Wait Time (min)</th>
+                    <th>Notified Wait Time (min)</th>
+                    <th>Follow-Up</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for patient in queue %}
+                    <tr>
+                        <td>{{ patient.patient_id }}</td>
+                        <td>{{ patient.name }}</td>
+                        <td>{{ patient.department }}</td>
+                        <td>{{ patient.queue_position }}</td>
+                        <td>{{ patient.queue_length }}</td>
+                        <td>{{ patient.predicted_wait_time | round(1) }}</td>
+                        <td>{{ patient.notified_wait_time | round(1) }}</td>
+                        <td>{{ 'Yes' if patient.is_follow_up == 1 else 'No' }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No patients in the queue.</p>
+    {% endif %}
+
+    <!-- Add Patient Link -->
+    <div style="margin-top: 20px;">
+        <a href="{{ url_for('add_patient') }}">Add New Patient</a>
+    </div>
+
+    <!-- Delay Patient Form -->
+    <div class="form-container">
+        <h2>Delay a Patient</h2>
+        <form action="{{ url_for('delay_patient') }}" method="POST">
+            <label for="patient_id">Patient ID:</label>
+            <input type="number" id="patient_id" name="patient_id" required>
+            
+            <label for="delay_minutes">Delay Minutes:</label>
+            <input type="number" id="delay_minutes" name="delay_minutes" required>
+            
+            <button type="submit">Delay Patient</button>
+        </form>
+    </div>
+
+    <!-- Missed Appointment Form -->
+    <div class="form-container">
+        <h2>Handle Missed Appointment</h2>
+        <form action="{{ url_for('missed_appointment') }}" method="POST">
+            <label for="patient_id">Patient ID (who missed):</label>
+            <input type="number" id="patient_id" name="patient_id" required>
+            
+            <label for="new_position_after_patient_id">Place After Patient ID:</label>
+            <input type="number" id="new_position_after_patient_id" name="new_position_after_patient_id" required>
+            
+            <button type="submit">Reassign Position</button>
+        </form>
+    </div>
+
+    <!-- Done Early Form -->
+    <div class="form-container">
+        <h2>Patient Finished Early</h2>
+        <form action="{{ url_for('done_early') }}" method="POST">
+            <label for="patient_id">Patient ID:</label>
+            <input type="number" id="patient_id" name="patient_id" required>
+            
+            <label for="actual_time_taken">Actual Time Taken (min):</label>
+            <input type="number" step="0.1" id="actual_time_taken" name="actual_time_taken" required>
+            
+            <button type="submit">Mark as Done Early</button>
+        </form>
+    </div>
+
+    <!-- Cancel Patient Form -->
+    <div class="form-container">
+        <h2>Cancel Appointment</h2>
+        <form action="{{ url_for('cancel_patient') }}" method="POST">
+            <label for="patient_id">Patient ID:</label>
+            <input type="number" id="patient_id" name="patient_id" required>
+            
+            <button type="submit">Cancel Appointment</button>
+        </form>
+    </div>
+
+    <!-- Add Feedback Form -->
+    <div class="form-container">
+        <h2>Add Feedback</h2>
+        <form action="{{ url_for('add_feedback_route') }}" method="POST">
+            <label for="patient_id">Patient ID:</label>
+            <input type="number" id="patient_id" name="patient_id" required>
+            
+            <label for="actual_wait_time">Actual Wait Time (min):</label>
+            <input type="number" step="0.1" id="actual_wait_time" name="actual_wait_time" required>
+            
+            <button type="submit">Add Feedback</button>
+        </form>
+    </div>
+
+    <!-- Back to Queue Link -->
+    <div style="margin-top: 20px;">
+        <a href="{{ url_for('show_queue') }}">Back to Queue</a>
+    </div>
+</body>
+</html>

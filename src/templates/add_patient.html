@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Patient</title>
+    <style>
+        .message {
+            color: green;
+            margin: 10px 0;
+        }
+        .error {
+            color: red;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add New Patient</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form method="POST" action="{{ url_for('add_patient') }}">
+        <label for="patient_id">Patient ID:</label>
+        <input type="number" id="patient_id" name="patient_id" required><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+            <option value="Emergency">Emergency</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="General Practice">General Practice</option>
+            <option value="Dermatology">Dermatology</option>
+        </select><br>
+        <label for="patient_condition_severity">Condition Severity (1-5):</label>
+        <input type="number" id="patient_condition_severity" name="patient_condition_severity" min="1" max="5" required><br>
+        <label for="day_of_week">Day of Week (0-6):</label>
+        <input type="number" id="day_of_week" name="day_of_week" min="0" max="6" required><br>
+        <label for="hour">Hour (0-23):</label>
+        <input type="number" id="hour" name="hour" min="0" max="23" required><br>
+        <label for="queue_length">Queue Length:</label>
+        <input type="number" id="queue_length" name="queue_length" min="1" required><br>
+        <label for="doctors_available">Doctors Available:</label>
+        <input type="number" id="doctors_available" name="doctors_available" min="1" required><br>
+        <label for="queue_position">Queue Position:</label>
+        <input type="number" id="queue_position" name="queue_position" min="1" required><br>
+        <label for="patient_age">Patient Age:</label>
+        <input type="number" id="patient_age" name="patient_age" min="1" max="120" required><br>
+        <label for="delay_factor">Delay Factor:</label>
+        <input type="number" id="delay_factor" name="delay_factor" min="0" required><br>
+        <label for="is_canceled">Is Canceled (0 or 1):</label>
+        <input type="number" id="is_canceled" name="is_canceled" min="0" max="1" required><br>
+        <label for="doctor_experience">Doctor Experience (years):</label>
+        <input type="number" id="doctor_experience" name="doctor_experience" min="1" required><br>
+        <label for="historical_wait_time">Historical Wait Time (min):</label>
+        <input type="number" id="historical_wait_time" name="historical_wait_time" min="0" required><br>
+        <label for="is_follow_up">Is Follow-Up (0 or 1):</label>
+        <input type="number" id="is_follow_up" name="is_follow_up" min="0" max="1" required><br>
+        <button type="submit">Add Patient</button>
+    </form>
+    <p><a href="{{ url_for('show_queue') }}">Back to Queue</a></p>
+</body>
+</html>
