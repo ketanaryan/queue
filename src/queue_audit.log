@@ -12335,3 +12335,513 @@
 2025-03-23 11:13:20,501 - INFO - 127.0.0.1 - - [23/Mar/2025 11:13:20] "GET /api/patient/4 HTTP/1.1" 200 -
 2025-03-23 11:13:20,525 - INFO - 127.0.0.1 - - [23/Mar/2025 11:13:20] "GET /api/patient/3 HTTP/1.1" 200 -
 2025-03-23 11:13:20,599 - INFO - 127.0.0.1 - - [23/Mar/2025 11:13:20] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:35:53,917 - INFO - Patient 1 (position 1) notified 8.5 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 6.5
+2025-03-23 11:35:53,917 - INFO - Notification sent to Patient 1: Your estimated wait time is now 6.5 minutes after queue recalculation.
+2025-03-23 11:35:53,934 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:53,935 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:53,935 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:53,935 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:53,944 - INFO - Notification sent to Patient 1: Your estimated wait time is 6.5 minutes.
+2025-03-23 11:35:53,944 - INFO - Patient 1 added to queue: {'patient_id': 1, 'name': 'John Smith', 'department': 'Emergency', 'patient_condition_severity': 2, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 0, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 1, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 5, 'appointment_time': '2025-03-23T11:45:53.894893', 'priority_score': 1.6, 'base_wait_time': 15.0, 'cumulative_delay': 0, 'predicted_wait_time': 15.0, 'notified_wait_time': 6.4613981604675494}, Base Wait Time: 15.0, Cumulative Delay: 0.0, Predicted Wait Time: 15.0, Notified Wait Time: 6.5
+2025-03-23 11:35:53,961 - INFO - Patient 1 (position 1) notified 7.4 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 7.6
+2025-03-23 11:35:53,962 - INFO - Notification sent to Patient 1: Your estimated wait time is now 7.6 minutes after queue recalculation.
+2025-03-23 11:35:53,962 - INFO - Patient 2 (position 2) notified 9.2 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 16.3
+2025-03-23 11:35:53,962 - INFO - Notification sent to Patient 2: Your estimated wait time is now 16.3 minutes after queue recalculation.
+2025-03-23 11:35:53,975 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:53,976 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:53,976 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:53,976 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:53,978 - INFO - Notification sent to Patient 2: Your estimated wait time is 16.3 minutes.
+2025-03-23 11:35:53,978 - INFO - Patient 2 added to queue: {'patient_id': 2, 'name': 'Sarah Johnson', 'department': 'Emergency', 'patient_condition_severity': 3, 'status': 'in-progress', 'is_canceled': 0, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 2, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 5, 'appointment_time': '2025-03-23T11:55:53.894893', 'priority_score': 2.4000000000000004, 'base_wait_time': 10.5, 'cumulative_delay': 0, 'predicted_wait_time': 25.5, 'notified_wait_time': 16.27524036893843}, Base Wait Time: 10.5, Cumulative Delay: 0.0, Predicted Wait Time: 25.5, Notified Wait Time: 16.3
+2025-03-23 11:35:53,993 - INFO - Patient 1 (position 1) notified 9.6 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 5.4
+2025-03-23 11:35:53,993 - INFO - Notification sent to Patient 1: Your estimated wait time is now 5.4 minutes after queue recalculation.
+2025-03-23 11:35:53,993 - INFO - Patient 2 (position 2) notified 6.1 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 19.4
+2025-03-23 11:35:53,994 - INFO - Notification sent to Patient 2: Your estimated wait time is now 19.4 minutes after queue recalculation.
+2025-03-23 11:35:53,994 - INFO - Patient 3 (position 3) notified 9.0 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 46.5
+2025-03-23 11:35:53,994 - INFO - Notification sent to Patient 3: Your estimated wait time is now 46.5 minutes after queue recalculation.
+2025-03-23 11:35:54,007 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:54,007 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:54,008 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:54,008 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:54,010 - INFO - Notification sent to Patient 3: Your estimated wait time is 46.5 minutes.
+2025-03-23 11:35:54,011 - INFO - Patient 3 added to queue: {'patient_id': 3, 'name': 'Michael Brown', 'department': 'Cardiology', 'patient_condition_severity': 1, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 0, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 3, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:05:53.894893', 'priority_score': 0.8, 'base_wait_time': 30.0, 'cumulative_delay': 0, 'predicted_wait_time': 55.5, 'notified_wait_time': 46.51585871813295}, Base Wait Time: 30.0, Cumulative Delay: 0.0, Predicted Wait Time: 55.5, Notified Wait Time: 46.5
+2025-03-23 11:35:54,024 - INFO - Patient 1 (position 1) notified 8.7 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 6.3
+2025-03-23 11:35:54,025 - INFO - Notification sent to Patient 1: Your estimated wait time is now 6.3 minutes after queue recalculation.
+2025-03-23 11:35:54,025 - INFO - Patient 2 (position 2) notified 5.7 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 19.8
+2025-03-23 11:35:54,025 - INFO - Notification sent to Patient 2: Your estimated wait time is now 19.8 minutes after queue recalculation.
+2025-03-23 11:35:54,025 - INFO - Patient 3 (position 3) notified 7.1 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 48.4
+2025-03-23 11:35:54,026 - INFO - Notification sent to Patient 3: Your estimated wait time is now 48.4 minutes after queue recalculation.
+2025-03-23 11:35:54,026 - INFO - Patient 4 (position 4) notified 8.2 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 68.3
+2025-03-23 11:35:54,026 - INFO - Notification sent to Patient 4: Your estimated wait time is now 68.3 minutes after queue recalculation.
+2025-03-23 11:35:54,040 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:54,040 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:54,040 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:54,040 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:54,043 - INFO - Notification sent to Patient 4: Your estimated wait time is 68.3 minutes.
+2025-03-23 11:35:54,043 - INFO - Patient 4 added to queue: {'patient_id': 4, 'name': 'Emily Davis', 'department': 'Cardiology', 'patient_condition_severity': 2, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 4, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:15:53.894893', 'priority_score': 1.6, 'base_wait_time': 21.0, 'cumulative_delay': 0, 'predicted_wait_time': 76.5, 'notified_wait_time': 68.34125950802974}, Base Wait Time: 21.0, Cumulative Delay: 0.0, Predicted Wait Time: 76.5, Notified Wait Time: 68.3
+2025-03-23 11:35:54,058 - INFO - Patient 1 (position 1) notified 7.9 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 7.1
+2025-03-23 11:35:54,058 - INFO - Notification sent to Patient 1: Your estimated wait time is now 7.1 minutes after queue recalculation.
+2025-03-23 11:35:54,059 - INFO - Patient 2 (position 2) notified 7.5 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 18.0
+2025-03-23 11:35:54,059 - INFO - Notification sent to Patient 2: Your estimated wait time is now 18.0 minutes after queue recalculation.
+2025-03-23 11:35:54,059 - INFO - Patient 3 (position 3) notified 6.5 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 49.0
+2025-03-23 11:35:54,059 - INFO - Notification sent to Patient 3: Your estimated wait time is now 49.0 minutes after queue recalculation.
+2025-03-23 11:35:54,060 - INFO - Patient 4 (position 4) notified 8.9 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 67.6
+2025-03-23 11:35:54,060 - INFO - Notification sent to Patient 4: Your estimated wait time is now 67.6 minutes after queue recalculation.
+2025-03-23 11:35:54,060 - INFO - Patient 5 (position 5) notified 8.8 minutes early. Predicted Wait Time: 91.5, Notified Wait Time: 82.7
+2025-03-23 11:35:54,061 - INFO - Notification sent to Patient 5: Your estimated wait time is now 82.7 minutes after queue recalculation.
+2025-03-23 11:35:54,074 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:54,075 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:54,075 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:54,075 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:54,078 - INFO - Notification sent to Patient 5: Your estimated wait time is 82.7 minutes.
+2025-03-23 11:35:54,078 - INFO - Patient 5 added to queue: {'patient_id': 5, 'name': 'Robert Wilson', 'department': 'Emergency', 'patient_condition_severity': 2, 'status': 'completed', 'is_canceled': 0, 'is_follow_up': 0, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 5, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 5, 'appointment_time': '2025-03-23T12:25:53.894893', 'priority_score': 1.6, 'base_wait_time': 15.0, 'cumulative_delay': 0, 'predicted_wait_time': 91.5, 'notified_wait_time': 82.66024025758861}, Base Wait Time: 15.0, Cumulative Delay: 0.0, Predicted Wait Time: 91.5, Notified Wait Time: 82.7
+2025-03-23 11:35:54,094 - INFO - Patient 1 (position 1) notified 7.7 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 7.3
+2025-03-23 11:35:54,094 - INFO - Notification sent to Patient 1: Your estimated wait time is now 7.3 minutes after queue recalculation.
+2025-03-23 11:35:54,094 - INFO - Patient 2 (position 2) notified 9.9 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 15.6
+2025-03-23 11:35:54,094 - INFO - Notification sent to Patient 2: Your estimated wait time is now 15.6 minutes after queue recalculation.
+2025-03-23 11:35:54,094 - INFO - Patient 3 (position 3) notified 6.2 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 49.3
+2025-03-23 11:35:54,094 - INFO - Notification sent to Patient 3: Your estimated wait time is now 49.3 minutes after queue recalculation.
+2025-03-23 11:35:54,095 - INFO - Patient 4 (position 4) notified 6.4 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 70.1
+2025-03-23 11:35:54,095 - INFO - Notification sent to Patient 4: Your estimated wait time is now 70.1 minutes after queue recalculation.
+2025-03-23 11:35:54,095 - INFO - Patient 5 (position 5) notified 7.2 minutes early. Predicted Wait Time: 91.5, Notified Wait Time: 84.3
+2025-03-23 11:35:54,095 - INFO - Notification sent to Patient 5: Your estimated wait time is now 84.3 minutes after queue recalculation.
+2025-03-23 11:35:54,095 - INFO - Patient 6 (position 6) notified 8.3 minutes early. Predicted Wait Time: 102.0, Notified Wait Time: 93.7
+2025-03-23 11:35:54,096 - INFO - Notification sent to Patient 6: Your estimated wait time is now 93.7 minutes after queue recalculation.
+2025-03-23 11:35:54,109 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:54,110 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:54,110 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:54,110 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:54,113 - INFO - Notification sent to Patient 6: Your estimated wait time is 93.7 minutes.
+2025-03-23 11:35:54,113 - INFO - Patient 6 added to queue: {'patient_id': 6, 'name': 'Jennifer Lee', 'department': 'Emergency', 'patient_condition_severity': 4, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 6, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 5, 'appointment_time': '2025-03-23T12:35:53.894893', 'priority_score': 3.2, 'base_wait_time': 10.5, 'cumulative_delay': 0, 'predicted_wait_time': 102.0, 'notified_wait_time': 93.68455128237167}, Base Wait Time: 10.5, Cumulative Delay: 0.0, Predicted Wait Time: 102.0, Notified Wait Time: 93.7
+2025-03-23 11:35:54,130 - INFO - Patient 1 (position 1) notified 9.7 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 5.3
+2025-03-23 11:35:54,131 - INFO - Notification sent to Patient 1: Your estimated wait time is now 5.3 minutes after queue recalculation.
+2025-03-23 11:35:54,131 - INFO - Patient 2 (position 2) notified 5.0 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 20.5
+2025-03-23 11:35:54,132 - INFO - Notification sent to Patient 2: Your estimated wait time is now 20.5 minutes after queue recalculation.
+2025-03-23 11:35:54,132 - INFO - Patient 3 (position 3) notified 8.7 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 46.8
+2025-03-23 11:35:54,133 - INFO - Notification sent to Patient 3: Your estimated wait time is now 46.8 minutes after queue recalculation.
+2025-03-23 11:35:54,133 - INFO - Patient 4 (position 4) notified 7.1 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 69.4
+2025-03-23 11:35:54,133 - INFO - Notification sent to Patient 4: Your estimated wait time is now 69.4 minutes after queue recalculation.
+2025-03-23 11:35:54,134 - INFO - Patient 5 (position 5) notified 8.6 minutes early. Predicted Wait Time: 91.5, Notified Wait Time: 82.9
+2025-03-23 11:35:54,134 - INFO - Notification sent to Patient 5: Your estimated wait time is now 82.9 minutes after queue recalculation.
+2025-03-23 11:35:54,134 - INFO - Patient 6 (position 6) notified 8.3 minutes early. Predicted Wait Time: 102.0, Notified Wait Time: 93.7
+2025-03-23 11:35:54,134 - INFO - Notification sent to Patient 6: Your estimated wait time is now 93.7 minutes after queue recalculation.
+2025-03-23 11:35:54,134 - INFO - Patient 7 (position 7) notified 7.8 minutes early. Predicted Wait Time: 132.0, Notified Wait Time: 124.2
+2025-03-23 11:35:54,135 - INFO - Notification sent to Patient 7: Your estimated wait time is now 124.2 minutes after queue recalculation.
+2025-03-23 11:35:54,149 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:54,149 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:54,149 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:54,150 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:54,153 - INFO - Notification sent to Patient 7: Your estimated wait time is 124.2 minutes.
+2025-03-23 11:35:54,154 - INFO - Patient 7 added to queue: {'patient_id': 7, 'name': 'David Miller', 'department': 'General Practice', 'patient_condition_severity': 1, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 0, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 7, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:45:53.894893', 'priority_score': 0.8, 'base_wait_time': 30.0, 'cumulative_delay': 0, 'predicted_wait_time': 132.0, 'notified_wait_time': 124.16922315183974}, Base Wait Time: 30.0, Cumulative Delay: 0.0, Predicted Wait Time: 132.0, Notified Wait Time: 124.2
+2025-03-23 11:35:54,170 - INFO - Patient 1 (position 1) notified 7.1 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 7.9
+2025-03-23 11:35:54,171 - INFO - Notification sent to Patient 1: Your estimated wait time is now 7.9 minutes after queue recalculation.
+2025-03-23 11:35:54,171 - INFO - Patient 2 (position 2) notified 8.5 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 17.0
+2025-03-23 11:35:54,171 - INFO - Notification sent to Patient 2: Your estimated wait time is now 17.0 minutes after queue recalculation.
+2025-03-23 11:35:54,172 - INFO - Patient 3 (position 3) notified 6.6 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 48.9
+2025-03-23 11:35:54,172 - INFO - Notification sent to Patient 3: Your estimated wait time is now 48.9 minutes after queue recalculation.
+2025-03-23 11:35:54,172 - INFO - Patient 4 (position 4) notified 7.1 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 69.4
+2025-03-23 11:35:54,173 - INFO - Notification sent to Patient 4: Your estimated wait time is now 69.4 minutes after queue recalculation.
+2025-03-23 11:35:54,173 - INFO - Patient 5 (position 5) notified 6.8 minutes early. Predicted Wait Time: 91.5, Notified Wait Time: 84.7
+2025-03-23 11:35:54,173 - INFO - Notification sent to Patient 5: Your estimated wait time is now 84.7 minutes after queue recalculation.
+2025-03-23 11:35:54,173 - INFO - Patient 6 (position 6) notified 5.0 minutes early. Predicted Wait Time: 102.0, Notified Wait Time: 97.0
+2025-03-23 11:35:54,173 - INFO - Notification sent to Patient 6: Your estimated wait time is now 97.0 minutes after queue recalculation.
+2025-03-23 11:35:54,174 - INFO - Patient 7 (position 7) notified 6.3 minutes early. Predicted Wait Time: 132.0, Notified Wait Time: 125.7
+2025-03-23 11:35:54,174 - INFO - Notification sent to Patient 7: Your estimated wait time is now 125.7 minutes after queue recalculation.
+2025-03-23 11:35:54,174 - INFO - Patient 8 (position 8) notified 7.5 minutes early. Predicted Wait Time: 153.0, Notified Wait Time: 145.5
+2025-03-23 11:35:54,174 - INFO - Notification sent to Patient 8: Your estimated wait time is now 145.5 minutes after queue recalculation.
+2025-03-23 11:35:54,189 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:54,189 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:54,190 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:54,190 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:54,193 - INFO - Notification sent to Patient 8: Your estimated wait time is 145.5 minutes.
+2025-03-23 11:35:54,193 - INFO - Patient 8 added to queue: {'patient_id': 8, 'name': 'Lisa Anderson', 'department': 'Dermatology', 'patient_condition_severity': 2, 'status': 'cancelled', 'is_canceled': 1, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 8, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:55:53.894893', 'priority_score': 1.6, 'base_wait_time': 21.0, 'cumulative_delay': 0, 'predicted_wait_time': 153.0, 'notified_wait_time': 145.4858010906888}, Base Wait Time: 21.0, Cumulative Delay: 0.0, Predicted Wait Time: 153.0, Notified Wait Time: 145.5
+2025-03-23 11:35:54,197 - INFO - Notification sent to Patient 2: You missed your turn. You have been placed at position 5 in the queue.
+2025-03-23 11:35:54,197 - INFO - Patient 2 missed their turn and was moved to position 5 after Patient 4.
+2025-03-23 11:35:54,197 - INFO - Patient 1 (position 1) notified 8.2 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 6.8
+2025-03-23 11:35:54,198 - INFO - Notification sent to Patient 1: Your estimated wait time is now 6.8 minutes after queue recalculation.
+2025-03-23 11:35:54,198 - INFO - Patient 3 (position 2) notified 7.1 minutes early. Predicted Wait Time: 45.0, Notified Wait Time: 37.9
+2025-03-23 11:35:54,198 - INFO - Notification sent to Patient 3: Your estimated wait time is now 37.9 minutes after queue recalculation.
+2025-03-23 11:35:54,198 - INFO - Patient 4 (position 3) notified 6.9 minutes early. Predicted Wait Time: 66.0, Notified Wait Time: 59.1
+2025-03-23 11:35:54,198 - INFO - Notification sent to Patient 4: Your estimated wait time is now 59.1 minutes after queue recalculation.
+2025-03-23 11:35:54,199 - INFO - Patient 5 (position 4) notified 6.3 minutes early. Predicted Wait Time: 81.0, Notified Wait Time: 74.7
+2025-03-23 11:35:54,199 - INFO - Notification sent to Patient 5: Your estimated wait time is now 74.7 minutes after queue recalculation.
+2025-03-23 11:35:54,199 - INFO - Patient 2 (position 5) notified 8.9 minutes early. Predicted Wait Time: 91.5, Notified Wait Time: 82.6
+2025-03-23 11:35:54,199 - INFO - Notification sent to Patient 2: Your estimated wait time is now 82.6 minutes after queue recalculation.
+2025-03-23 11:35:54,199 - INFO - Patient 6 (position 7) notified 7.6 minutes early. Predicted Wait Time: 102.0, Notified Wait Time: 94.4
+2025-03-23 11:35:54,199 - INFO - Notification sent to Patient 6: Your estimated wait time is now 94.4 minutes after queue recalculation.
+2025-03-23 11:35:54,200 - INFO - Patient 7 (position 8) notified 5.0 minutes early. Predicted Wait Time: 132.0, Notified Wait Time: 127.0
+2025-03-23 11:35:54,200 - INFO - Notification sent to Patient 7: Your estimated wait time is now 127.0 minutes after queue recalculation.
+2025-03-23 11:35:54,200 - INFO - Patient 8 (position 9) notified 5.1 minutes early. Predicted Wait Time: 153.0, Notified Wait Time: 147.9
+2025-03-23 11:35:54,200 - INFO - Notification sent to Patient 8: Your estimated wait time is now 147.9 minutes after queue recalculation.
+2025-03-23 11:35:54,207 - INFO - Notification sent to Patient 1: Your appointment is complete. You finished 10.0 minutes earlier than expected.
+2025-03-23 11:35:54,207 - INFO - Patient 1 finished early. Predicted: 15.0 minutes, Actual: 5.0 minutes, Time Saved: 10.0 minutes.
+2025-03-23 11:35:54,207 - INFO - Patient 3 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:54,207 - INFO - Patient 4 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:54,208 - INFO - Patient 5 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:54,208 - INFO - Patient 6 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:54,208 - INFO - Patient 7 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:54,208 - INFO - Patient 8 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:54,208 - INFO - Patient 2 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:54,208 - INFO - Patient 3 (position 1) notified 8.8 minutes early. Predicted Wait Time: 30.0, Notified Wait Time: 21.2
+2025-03-23 11:35:54,208 - INFO - Notification sent to Patient 3: Your estimated wait time is now 21.2 minutes after queue recalculation.
+2025-03-23 11:35:54,208 - INFO - Patient 4 (position 2) notified 8.4 minutes early. Predicted Wait Time: 51.0, Notified Wait Time: 42.6
+2025-03-23 11:35:54,208 - INFO - Notification sent to Patient 4: Your estimated wait time is now 42.6 minutes after queue recalculation.
+2025-03-23 11:35:54,209 - INFO - Patient 5 (position 3) notified 6.0 minutes early. Predicted Wait Time: 66.0, Notified Wait Time: 60.0
+2025-03-23 11:35:54,209 - INFO - Notification sent to Patient 5: Your estimated wait time is now 60.0 minutes after queue recalculation.
+2025-03-23 11:35:54,209 - INFO - Patient 2 (position 4) notified 9.3 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 67.2
+2025-03-23 11:35:54,209 - INFO - Notification sent to Patient 2: Your estimated wait time is now 67.2 minutes after queue recalculation.
+2025-03-23 11:35:54,209 - INFO - Patient 6 (position 6) notified 5.2 minutes early. Predicted Wait Time: 87.0, Notified Wait Time: 81.8
+2025-03-23 11:35:54,209 - INFO - Notification sent to Patient 6: Your estimated wait time is now 81.8 minutes after queue recalculation.
+2025-03-23 11:35:54,210 - INFO - Patient 7 (position 7) notified 6.8 minutes early. Predicted Wait Time: 117.0, Notified Wait Time: 110.2
+2025-03-23 11:35:54,210 - INFO - Notification sent to Patient 7: Your estimated wait time is now 110.2 minutes after queue recalculation.
+2025-03-23 11:35:54,210 - INFO - Patient 8 (position 8) notified 9.5 minutes early. Predicted Wait Time: 138.0, Notified Wait Time: 128.5
+2025-03-23 11:35:54,210 - INFO - Notification sent to Patient 8: Your estimated wait time is now 128.5 minutes after queue recalculation.
+2025-03-23 11:35:54,215 - INFO - Notification sent to Patient 3: Your appointment has been delayed by 10 minutes.
+2025-03-23 11:35:54,215 - INFO - Patient 3 delayed by 10 minutes. Base Wait Time: 30.0, Cumulative Delay: 10.0
+2025-03-23 11:35:54,216 - INFO - Patient 3 (position 1) notified 6.6 minutes early. Predicted Wait Time: 40.0, Notified Wait Time: 33.4
+2025-03-23 11:35:54,216 - INFO - Notification sent to Patient 3: Your estimated wait time is now 33.4 minutes after queue recalculation.
+2025-03-23 11:35:54,216 - INFO - Patient 4 (position 2) notified 6.8 minutes early. Predicted Wait Time: 61.0, Notified Wait Time: 54.2
+2025-03-23 11:35:54,216 - INFO - Notification sent to Patient 4: Your estimated wait time is now 54.2 minutes after queue recalculation.
+2025-03-23 11:35:54,216 - INFO - Patient 5 (position 3) notified 7.2 minutes early. Predicted Wait Time: 76.0, Notified Wait Time: 68.8
+2025-03-23 11:35:54,216 - INFO - Notification sent to Patient 5: Your estimated wait time is now 68.8 minutes after queue recalculation.
+2025-03-23 11:35:54,217 - INFO - Patient 2 (position 4) notified 8.0 minutes early. Predicted Wait Time: 86.5, Notified Wait Time: 78.5
+2025-03-23 11:35:54,217 - INFO - Notification sent to Patient 2: Your estimated wait time is now 78.5 minutes after queue recalculation.
+2025-03-23 11:35:54,217 - INFO - Patient 6 (position 6) notified 5.2 minutes early. Predicted Wait Time: 97.0, Notified Wait Time: 91.8
+2025-03-23 11:35:54,217 - INFO - Notification sent to Patient 6: Your estimated wait time is now 91.8 minutes after queue recalculation.
+2025-03-23 11:35:54,218 - INFO - Patient 7 (position 7) notified 7.6 minutes early. Predicted Wait Time: 127.0, Notified Wait Time: 119.4
+2025-03-23 11:35:54,218 - INFO - Notification sent to Patient 7: Your estimated wait time is now 119.4 minutes after queue recalculation.
+2025-03-23 11:35:54,219 - INFO - Patient 8 (position 8) notified 6.0 minutes early. Predicted Wait Time: 148.0, Notified Wait Time: 142.0
+2025-03-23 11:35:54,219 - INFO - Notification sent to Patient 8: Your estimated wait time is now 142.0 minutes after queue recalculation.
+2025-03-23 11:35:54,225 - INFO - Feedback added for Patient 3: Actual wait time 30 minutes.
+2025-03-23 11:35:54,307 - INFO - Model retrained with feedback data.
+2025-03-23 11:35:54,401 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-23 11:35:54,401 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 11:35:54,405 - INFO -  * Restarting with stat
+2025-03-23 11:35:57,271 - INFO - Patient 1 (position 1) notified 9.4 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 5.6
+2025-03-23 11:35:57,272 - INFO - Notification sent to Patient 1: Your estimated wait time is now 5.6 minutes after queue recalculation.
+2025-03-23 11:35:57,286 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:57,286 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:57,286 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:57,287 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:57,291 - INFO - Notification sent to Patient 1: Your estimated wait time is 5.6 minutes.
+2025-03-23 11:35:57,291 - INFO - Patient 1 added to queue: {'patient_id': 1, 'name': 'John Smith', 'department': 'Emergency', 'patient_condition_severity': 2, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 0, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 1, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 5, 'appointment_time': '2025-03-23T11:45:57.261170', 'priority_score': 1.6, 'base_wait_time': 15.0, 'cumulative_delay': 0, 'predicted_wait_time': 15.0, 'notified_wait_time': 5.632677968761257}, Base Wait Time: 15.0, Cumulative Delay: 0.0, Predicted Wait Time: 15.0, Notified Wait Time: 5.6
+2025-03-23 11:35:57,308 - INFO - Patient 1 (position 1) notified 6.0 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 9.0
+2025-03-23 11:35:57,308 - INFO - Notification sent to Patient 1: Your estimated wait time is now 9.0 minutes after queue recalculation.
+2025-03-23 11:35:57,309 - INFO - Patient 2 (position 2) notified 9.0 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 16.5
+2025-03-23 11:35:57,309 - INFO - Notification sent to Patient 2: Your estimated wait time is now 16.5 minutes after queue recalculation.
+2025-03-23 11:35:57,322 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:57,322 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:57,323 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:57,323 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:57,327 - INFO - Notification sent to Patient 2: Your estimated wait time is 16.5 minutes.
+2025-03-23 11:35:57,327 - INFO - Patient 2 added to queue: {'patient_id': 2, 'name': 'Sarah Johnson', 'department': 'Emergency', 'patient_condition_severity': 3, 'status': 'in-progress', 'is_canceled': 0, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 2, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 5, 'appointment_time': '2025-03-23T11:55:57.261170', 'priority_score': 2.4000000000000004, 'base_wait_time': 10.5, 'cumulative_delay': 0, 'predicted_wait_time': 25.5, 'notified_wait_time': 16.4840302274377}, Base Wait Time: 10.5, Cumulative Delay: 0.0, Predicted Wait Time: 25.5, Notified Wait Time: 16.5
+2025-03-23 11:35:57,347 - INFO - Patient 1 (position 1) notified 8.3 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 6.7
+2025-03-23 11:35:57,348 - INFO - Notification sent to Patient 1: Your estimated wait time is now 6.7 minutes after queue recalculation.
+2025-03-23 11:35:57,348 - INFO - Patient 2 (position 2) notified 7.4 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 18.1
+2025-03-23 11:35:57,348 - INFO - Notification sent to Patient 2: Your estimated wait time is now 18.1 minutes after queue recalculation.
+2025-03-23 11:35:57,348 - INFO - Patient 3 (position 3) notified 8.0 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 47.5
+2025-03-23 11:35:57,348 - INFO - Notification sent to Patient 3: Your estimated wait time is now 47.5 minutes after queue recalculation.
+2025-03-23 11:35:57,366 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:57,366 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:57,366 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:57,366 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:57,370 - INFO - Notification sent to Patient 3: Your estimated wait time is 47.5 minutes.
+2025-03-23 11:35:57,370 - INFO - Patient 3 added to queue: {'patient_id': 3, 'name': 'Michael Brown', 'department': 'Cardiology', 'patient_condition_severity': 1, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 0, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 3, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:05:57.261170', 'priority_score': 0.8, 'base_wait_time': 30.0, 'cumulative_delay': 0, 'predicted_wait_time': 55.5, 'notified_wait_time': 47.52266076324951}, Base Wait Time: 30.0, Cumulative Delay: 0.0, Predicted Wait Time: 55.5, Notified Wait Time: 47.5
+2025-03-23 11:35:57,386 - INFO - Patient 1 (position 1) notified 8.6 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 6.4
+2025-03-23 11:35:57,387 - INFO - Notification sent to Patient 1: Your estimated wait time is now 6.4 minutes after queue recalculation.
+2025-03-23 11:35:57,387 - INFO - Patient 2 (position 2) notified 5.4 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 20.1
+2025-03-23 11:35:57,387 - INFO - Notification sent to Patient 2: Your estimated wait time is now 20.1 minutes after queue recalculation.
+2025-03-23 11:35:57,387 - INFO - Patient 3 (position 3) notified 7.6 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 47.9
+2025-03-23 11:35:57,387 - INFO - Notification sent to Patient 3: Your estimated wait time is now 47.9 minutes after queue recalculation.
+2025-03-23 11:35:57,388 - INFO - Patient 4 (position 4) notified 6.8 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 69.7
+2025-03-23 11:35:57,388 - INFO - Notification sent to Patient 4: Your estimated wait time is now 69.7 minutes after queue recalculation.
+2025-03-23 11:35:57,402 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:57,402 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:57,402 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:57,402 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:57,405 - INFO - Notification sent to Patient 4: Your estimated wait time is 69.7 minutes.
+2025-03-23 11:35:57,406 - INFO - Patient 4 added to queue: {'patient_id': 4, 'name': 'Emily Davis', 'department': 'Cardiology', 'patient_condition_severity': 2, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 4, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:15:57.261170', 'priority_score': 1.6, 'base_wait_time': 21.0, 'cumulative_delay': 0, 'predicted_wait_time': 76.5, 'notified_wait_time': 69.6600056703405}, Base Wait Time: 21.0, Cumulative Delay: 0.0, Predicted Wait Time: 76.5, Notified Wait Time: 69.7
+2025-03-23 11:35:57,420 - INFO - Patient 1 (position 1) notified 7.5 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 7.5
+2025-03-23 11:35:57,421 - INFO - Notification sent to Patient 1: Your estimated wait time is now 7.5 minutes after queue recalculation.
+2025-03-23 11:35:57,421 - INFO - Patient 2 (position 2) notified 5.3 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 20.2
+2025-03-23 11:35:57,422 - INFO - Notification sent to Patient 2: Your estimated wait time is now 20.2 minutes after queue recalculation.
+2025-03-23 11:35:57,422 - INFO - Patient 3 (position 3) notified 8.3 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 47.2
+2025-03-23 11:35:57,422 - INFO - Notification sent to Patient 3: Your estimated wait time is now 47.2 minutes after queue recalculation.
+2025-03-23 11:35:57,423 - INFO - Patient 4 (position 4) notified 9.1 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 67.4
+2025-03-23 11:35:57,423 - INFO - Notification sent to Patient 4: Your estimated wait time is now 67.4 minutes after queue recalculation.
+2025-03-23 11:35:57,423 - INFO - Patient 5 (position 5) notified 9.0 minutes early. Predicted Wait Time: 91.5, Notified Wait Time: 82.5
+2025-03-23 11:35:57,423 - INFO - Notification sent to Patient 5: Your estimated wait time is now 82.5 minutes after queue recalculation.
+2025-03-23 11:35:57,437 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:57,437 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:57,437 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:57,437 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:57,440 - INFO - Notification sent to Patient 5: Your estimated wait time is 82.5 minutes.
+2025-03-23 11:35:57,441 - INFO - Patient 5 added to queue: {'patient_id': 5, 'name': 'Robert Wilson', 'department': 'Emergency', 'patient_condition_severity': 2, 'status': 'completed', 'is_canceled': 0, 'is_follow_up': 0, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 5, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 5, 'appointment_time': '2025-03-23T12:25:57.261170', 'priority_score': 1.6, 'base_wait_time': 15.0, 'cumulative_delay': 0, 'predicted_wait_time': 91.5, 'notified_wait_time': 82.45541661459558}, Base Wait Time: 15.0, Cumulative Delay: 0.0, Predicted Wait Time: 91.5, Notified Wait Time: 82.5
+2025-03-23 11:35:57,454 - INFO - Patient 1 (position 1) notified 9.1 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 5.9
+2025-03-23 11:35:57,455 - INFO - Notification sent to Patient 1: Your estimated wait time is now 5.9 minutes after queue recalculation.
+2025-03-23 11:35:57,455 - INFO - Patient 2 (position 2) notified 8.1 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 17.4
+2025-03-23 11:35:57,456 - INFO - Notification sent to Patient 2: Your estimated wait time is now 17.4 minutes after queue recalculation.
+2025-03-23 11:35:57,456 - INFO - Patient 3 (position 3) notified 6.5 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 49.0
+2025-03-23 11:35:57,456 - INFO - Notification sent to Patient 3: Your estimated wait time is now 49.0 minutes after queue recalculation.
+2025-03-23 11:35:57,456 - INFO - Patient 4 (position 4) notified 7.0 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 69.5
+2025-03-23 11:35:57,456 - INFO - Notification sent to Patient 4: Your estimated wait time is now 69.5 minutes after queue recalculation.
+2025-03-23 11:35:57,457 - INFO - Patient 5 (position 5) notified 5.4 minutes early. Predicted Wait Time: 91.5, Notified Wait Time: 86.1
+2025-03-23 11:35:57,457 - INFO - Notification sent to Patient 5: Your estimated wait time is now 86.1 minutes after queue recalculation.
+2025-03-23 11:35:57,457 - INFO - Patient 6 (position 6) notified 8.5 minutes early. Predicted Wait Time: 102.0, Notified Wait Time: 93.5
+2025-03-23 11:35:57,457 - INFO - Notification sent to Patient 6: Your estimated wait time is now 93.5 minutes after queue recalculation.
+2025-03-23 11:35:57,471 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:57,471 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:57,471 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:57,471 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:57,475 - INFO - Notification sent to Patient 6: Your estimated wait time is 93.5 minutes.
+2025-03-23 11:35:57,475 - INFO - Patient 6 added to queue: {'patient_id': 6, 'name': 'Jennifer Lee', 'department': 'Emergency', 'patient_condition_severity': 4, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 6, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 5, 'appointment_time': '2025-03-23T12:35:57.261170', 'priority_score': 3.2, 'base_wait_time': 10.5, 'cumulative_delay': 0, 'predicted_wait_time': 102.0, 'notified_wait_time': 93.45391878250385}, Base Wait Time: 10.5, Cumulative Delay: 0.0, Predicted Wait Time: 102.0, Notified Wait Time: 93.5
+2025-03-23 11:35:57,511 - INFO - Patient 1 (position 1) notified 5.6 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 9.4
+2025-03-23 11:35:57,511 - INFO - Notification sent to Patient 1: Your estimated wait time is now 9.4 minutes after queue recalculation.
+2025-03-23 11:35:57,512 - INFO - Patient 2 (position 2) notified 7.5 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 18.0
+2025-03-23 11:35:57,512 - INFO - Notification sent to Patient 2: Your estimated wait time is now 18.0 minutes after queue recalculation.
+2025-03-23 11:35:57,513 - INFO - Patient 3 (position 3) notified 6.4 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 49.1
+2025-03-23 11:35:57,513 - INFO - Notification sent to Patient 3: Your estimated wait time is now 49.1 minutes after queue recalculation.
+2025-03-23 11:35:57,513 - INFO - Patient 4 (position 4) notified 6.8 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 69.7
+2025-03-23 11:35:57,513 - INFO - Notification sent to Patient 4: Your estimated wait time is now 69.7 minutes after queue recalculation.
+2025-03-23 11:35:57,514 - INFO - Patient 5 (position 5) notified 6.0 minutes early. Predicted Wait Time: 91.5, Notified Wait Time: 85.5
+2025-03-23 11:35:57,514 - INFO - Notification sent to Patient 5: Your estimated wait time is now 85.5 minutes after queue recalculation.
+2025-03-23 11:35:57,514 - INFO - Patient 6 (position 6) notified 8.1 minutes early. Predicted Wait Time: 102.0, Notified Wait Time: 93.9
+2025-03-23 11:35:57,514 - INFO - Notification sent to Patient 6: Your estimated wait time is now 93.9 minutes after queue recalculation.
+2025-03-23 11:35:57,514 - INFO - Patient 7 (position 7) notified 5.8 minutes early. Predicted Wait Time: 132.0, Notified Wait Time: 126.2
+2025-03-23 11:35:57,515 - INFO - Notification sent to Patient 7: Your estimated wait time is now 126.2 minutes after queue recalculation.
+2025-03-23 11:35:57,539 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:57,539 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:57,539 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:57,540 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:57,543 - INFO - Notification sent to Patient 7: Your estimated wait time is 126.2 minutes.
+2025-03-23 11:35:57,544 - INFO - Patient 7 added to queue: {'patient_id': 7, 'name': 'David Miller', 'department': 'General Practice', 'patient_condition_severity': 1, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 0, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 7, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:45:57.261170', 'priority_score': 0.8, 'base_wait_time': 30.0, 'cumulative_delay': 0, 'predicted_wait_time': 132.0, 'notified_wait_time': 126.1877715673258}, Base Wait Time: 30.0, Cumulative Delay: 0.0, Predicted Wait Time: 132.0, Notified Wait Time: 126.2
+2025-03-23 11:35:57,563 - INFO - Patient 1 (position 1) notified 8.7 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 6.3
+2025-03-23 11:35:57,563 - INFO - Notification sent to Patient 1: Your estimated wait time is now 6.3 minutes after queue recalculation.
+2025-03-23 11:35:57,563 - INFO - Patient 2 (position 2) notified 7.8 minutes early. Predicted Wait Time: 25.5, Notified Wait Time: 17.7
+2025-03-23 11:35:57,564 - INFO - Notification sent to Patient 2: Your estimated wait time is now 17.7 minutes after queue recalculation.
+2025-03-23 11:35:57,564 - INFO - Patient 3 (position 3) notified 7.7 minutes early. Predicted Wait Time: 55.5, Notified Wait Time: 47.8
+2025-03-23 11:35:57,564 - INFO - Notification sent to Patient 3: Your estimated wait time is now 47.8 minutes after queue recalculation.
+2025-03-23 11:35:57,564 - INFO - Patient 4 (position 4) notified 5.8 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 70.7
+2025-03-23 11:35:57,564 - INFO - Notification sent to Patient 4: Your estimated wait time is now 70.7 minutes after queue recalculation.
+2025-03-23 11:35:57,565 - INFO - Patient 5 (position 5) notified 7.4 minutes early. Predicted Wait Time: 91.5, Notified Wait Time: 84.1
+2025-03-23 11:35:57,565 - INFO - Notification sent to Patient 5: Your estimated wait time is now 84.1 minutes after queue recalculation.
+2025-03-23 11:35:57,565 - INFO - Patient 6 (position 6) notified 6.8 minutes early. Predicted Wait Time: 102.0, Notified Wait Time: 95.2
+2025-03-23 11:35:57,565 - INFO - Notification sent to Patient 6: Your estimated wait time is now 95.2 minutes after queue recalculation.
+2025-03-23 11:35:57,565 - INFO - Patient 7 (position 7) notified 7.0 minutes early. Predicted Wait Time: 132.0, Notified Wait Time: 125.0
+2025-03-23 11:35:57,565 - INFO - Notification sent to Patient 7: Your estimated wait time is now 125.0 minutes after queue recalculation.
+2025-03-23 11:35:57,566 - INFO - Patient 8 (position 8) notified 5.4 minutes early. Predicted Wait Time: 153.0, Notified Wait Time: 147.6
+2025-03-23 11:35:57,566 - INFO - Notification sent to Patient 8: Your estimated wait time is now 147.6 minutes after queue recalculation.
+2025-03-23 11:35:57,580 - INFO - Length of transformed_feature_names: 26
+2025-03-23 11:35:57,580 - INFO - Length of shap_values[0]: 26
+2025-03-23 11:35:57,580 - INFO - Transformed feature names: ['hour', 'day_of_week', 'queue_length', 'is_emergency', 'priority_score', 'doctors_available', 'patient_condition_severity', 'delay_factor', 'is_canceled', 'doctor_experience', 'patient_age', 'historical_wait_time', 'queue_position', 'is_peak_hour', 'is_night_shift', 'is_specialized', 'patients_per_doctor', 'queue_efficiency', 'is_senior', 'is_child', 'emergency_severity', 'critical_case', 'is_weekend', 'is_follow_up', 'department_Cardiology', 'time_of_day_morning']
+2025-03-23 11:35:57,580 - INFO - SHAP values: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+2025-03-23 11:35:57,583 - INFO - Notification sent to Patient 8: Your estimated wait time is 147.6 minutes.
+2025-03-23 11:35:57,584 - INFO - Patient 8 added to queue: {'patient_id': 8, 'name': 'Lisa Anderson', 'department': 'Dermatology', 'patient_condition_severity': 2, 'status': 'cancelled', 'is_canceled': 1, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 8, 'queue_position': 8, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:55:57.261170', 'priority_score': 1.6, 'base_wait_time': 21.0, 'cumulative_delay': 0, 'predicted_wait_time': 153.0, 'notified_wait_time': 147.55528392931046}, Base Wait Time: 21.0, Cumulative Delay: 0.0, Predicted Wait Time: 153.0, Notified Wait Time: 147.6
+2025-03-23 11:35:57,589 - INFO - Notification sent to Patient 2: You missed your turn. You have been placed at position 5 in the queue.
+2025-03-23 11:35:57,589 - INFO - Patient 2 missed their turn and was moved to position 5 after Patient 4.
+2025-03-23 11:35:57,590 - INFO - Patient 1 (position 1) notified 6.4 minutes early. Predicted Wait Time: 15.0, Notified Wait Time: 8.6
+2025-03-23 11:35:57,590 - INFO - Notification sent to Patient 1: Your estimated wait time is now 8.6 minutes after queue recalculation.
+2025-03-23 11:35:57,590 - INFO - Patient 3 (position 2) notified 5.7 minutes early. Predicted Wait Time: 45.0, Notified Wait Time: 39.3
+2025-03-23 11:35:57,590 - INFO - Notification sent to Patient 3: Your estimated wait time is now 39.3 minutes after queue recalculation.
+2025-03-23 11:35:57,590 - INFO - Patient 4 (position 3) notified 7.5 minutes early. Predicted Wait Time: 66.0, Notified Wait Time: 58.5
+2025-03-23 11:35:57,590 - INFO - Notification sent to Patient 4: Your estimated wait time is now 58.5 minutes after queue recalculation.
+2025-03-23 11:35:57,591 - INFO - Patient 5 (position 4) notified 10.0 minutes early. Predicted Wait Time: 81.0, Notified Wait Time: 71.0
+2025-03-23 11:35:57,591 - INFO - Notification sent to Patient 5: Your estimated wait time is now 71.0 minutes after queue recalculation.
+2025-03-23 11:35:57,591 - INFO - Patient 2 (position 5) notified 5.3 minutes early. Predicted Wait Time: 91.5, Notified Wait Time: 86.2
+2025-03-23 11:35:57,591 - INFO - Notification sent to Patient 2: Your estimated wait time is now 86.2 minutes after queue recalculation.
+2025-03-23 11:35:57,591 - INFO - Patient 6 (position 7) notified 7.7 minutes early. Predicted Wait Time: 102.0, Notified Wait Time: 94.3
+2025-03-23 11:35:57,591 - INFO - Notification sent to Patient 6: Your estimated wait time is now 94.3 minutes after queue recalculation.
+2025-03-23 11:35:57,592 - INFO - Patient 7 (position 8) notified 6.6 minutes early. Predicted Wait Time: 132.0, Notified Wait Time: 125.4
+2025-03-23 11:35:57,592 - INFO - Notification sent to Patient 7: Your estimated wait time is now 125.4 minutes after queue recalculation.
+2025-03-23 11:35:57,592 - INFO - Patient 8 (position 9) notified 9.8 minutes early. Predicted Wait Time: 153.0, Notified Wait Time: 143.2
+2025-03-23 11:35:57,592 - INFO - Notification sent to Patient 8: Your estimated wait time is now 143.2 minutes after queue recalculation.
+2025-03-23 11:35:57,597 - INFO - Notification sent to Patient 1: Your appointment is complete. You finished 10.0 minutes earlier than expected.
+2025-03-23 11:35:57,597 - INFO - Patient 1 finished early. Predicted: 15.0 minutes, Actual: 5.0 minutes, Time Saved: 10.0 minutes.
+2025-03-23 11:35:57,597 - INFO - Patient 3 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:57,597 - INFO - Patient 4 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:57,598 - INFO - Patient 5 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:57,598 - INFO - Patient 6 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:57,598 - INFO - Patient 7 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:57,598 - INFO - Patient 8 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:57,598 - INFO - Patient 2 cumulative delay reduced by 10.0 minutes. New Cumulative Delay: 0.0
+2025-03-23 11:35:57,599 - INFO - Patient 3 (position 1) notified 8.9 minutes early. Predicted Wait Time: 30.0, Notified Wait Time: 21.1
+2025-03-23 11:35:57,599 - INFO - Notification sent to Patient 3: Your estimated wait time is now 21.1 minutes after queue recalculation.
+2025-03-23 11:35:57,599 - INFO - Patient 4 (position 2) notified 9.4 minutes early. Predicted Wait Time: 51.0, Notified Wait Time: 41.6
+2025-03-23 11:35:57,599 - INFO - Notification sent to Patient 4: Your estimated wait time is now 41.6 minutes after queue recalculation.
+2025-03-23 11:35:57,599 - INFO - Patient 5 (position 3) notified 8.5 minutes early. Predicted Wait Time: 66.0, Notified Wait Time: 57.5
+2025-03-23 11:35:57,600 - INFO - Notification sent to Patient 5: Your estimated wait time is now 57.5 minutes after queue recalculation.
+2025-03-23 11:35:57,600 - INFO - Patient 2 (position 4) notified 9.6 minutes early. Predicted Wait Time: 76.5, Notified Wait Time: 66.9
+2025-03-23 11:35:57,600 - INFO - Notification sent to Patient 2: Your estimated wait time is now 66.9 minutes after queue recalculation.
+2025-03-23 11:35:57,600 - INFO - Patient 6 (position 6) notified 8.6 minutes early. Predicted Wait Time: 87.0, Notified Wait Time: 78.4
+2025-03-23 11:35:57,600 - INFO - Notification sent to Patient 6: Your estimated wait time is now 78.4 minutes after queue recalculation.
+2025-03-23 11:35:57,600 - INFO - Patient 7 (position 7) notified 6.7 minutes early. Predicted Wait Time: 117.0, Notified Wait Time: 110.3
+2025-03-23 11:35:57,601 - INFO - Notification sent to Patient 7: Your estimated wait time is now 110.3 minutes after queue recalculation.
+2025-03-23 11:35:57,601 - INFO - Patient 8 (position 8) notified 5.4 minutes early. Predicted Wait Time: 138.0, Notified Wait Time: 132.6
+2025-03-23 11:35:57,601 - INFO - Notification sent to Patient 8: Your estimated wait time is now 132.6 minutes after queue recalculation.
+2025-03-23 11:35:57,607 - INFO - Notification sent to Patient 3: Your appointment has been delayed by 10 minutes.
+2025-03-23 11:35:57,607 - INFO - Patient 3 delayed by 10 minutes. Base Wait Time: 30.0, Cumulative Delay: 10.0
+2025-03-23 11:35:57,608 - INFO - Patient 3 (position 1) notified 5.8 minutes early. Predicted Wait Time: 40.0, Notified Wait Time: 34.2
+2025-03-23 11:35:57,608 - INFO - Notification sent to Patient 3: Your estimated wait time is now 34.2 minutes after queue recalculation.
+2025-03-23 11:35:57,608 - INFO - Patient 4 (position 2) notified 9.9 minutes early. Predicted Wait Time: 61.0, Notified Wait Time: 51.1
+2025-03-23 11:35:57,608 - INFO - Notification sent to Patient 4: Your estimated wait time is now 51.1 minutes after queue recalculation.
+2025-03-23 11:35:57,608 - INFO - Patient 5 (position 3) notified 9.0 minutes early. Predicted Wait Time: 76.0, Notified Wait Time: 67.0
+2025-03-23 11:35:57,609 - INFO - Notification sent to Patient 5: Your estimated wait time is now 67.0 minutes after queue recalculation.
+2025-03-23 11:35:57,609 - INFO - Patient 2 (position 4) notified 7.1 minutes early. Predicted Wait Time: 86.5, Notified Wait Time: 79.4
+2025-03-23 11:35:57,609 - INFO - Notification sent to Patient 2: Your estimated wait time is now 79.4 minutes after queue recalculation.
+2025-03-23 11:35:57,609 - INFO - Patient 6 (position 6) notified 6.0 minutes early. Predicted Wait Time: 97.0, Notified Wait Time: 91.0
+2025-03-23 11:35:57,609 - INFO - Notification sent to Patient 6: Your estimated wait time is now 91.0 minutes after queue recalculation.
+2025-03-23 11:35:57,610 - INFO - Patient 7 (position 7) notified 7.9 minutes early. Predicted Wait Time: 127.0, Notified Wait Time: 119.1
+2025-03-23 11:35:57,610 - INFO - Notification sent to Patient 7: Your estimated wait time is now 119.1 minutes after queue recalculation.
+2025-03-23 11:35:57,610 - INFO - Patient 8 (position 8) notified 7.9 minutes early. Predicted Wait Time: 148.0, Notified Wait Time: 140.1
+2025-03-23 11:35:57,610 - INFO - Notification sent to Patient 8: Your estimated wait time is now 140.1 minutes after queue recalculation.
+2025-03-23 11:35:57,615 - INFO - Feedback added for Patient 3: Actual wait time 30 minutes.
+2025-03-23 11:35:57,713 - INFO - Model retrained with feedback data.
+2025-03-23 11:35:57,752 - WARNING -  * Debugger is active!
+2025-03-23 11:35:57,767 - INFO -  * Debugger PIN: 609-695-988
+2025-03-23 11:36:23,895 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:23] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:36:23,919 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:23] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:36:23,921 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:23] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:36:23,923 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:23] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:36:23,928 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:23] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:36:23,933 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:23] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:36:23,938 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:23] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:36:23,942 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:23] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:36:54,903 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:54] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:36:54,920 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:54] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:36:54,921 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:54] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:36:54,922 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:54] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:36:54,924 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:54] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:36:54,926 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:54] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:36:54,927 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:54] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:36:54,929 - INFO - 127.0.0.1 - - [23/Mar/2025 11:36:54] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:37:25,895 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:25] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:37:25,909 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:25] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:37:25,916 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:25] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:37:25,925 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:25] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:37:25,930 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:25] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:37:25,932 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:25] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:37:25,937 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:25] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:37:25,940 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:25] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:37:56,903 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:56] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:37:56,918 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:56] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:37:56,922 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:56] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:37:56,926 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:56] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:37:56,931 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:56] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:37:56,934 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:56] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:37:56,936 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:56] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:37:56,939 - INFO - 127.0.0.1 - - [23/Mar/2025 11:37:56] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:38:07,338 - INFO - Rendering queue with 7 patients: [{'patient_id': 3, 'name': 'Michael Brown', 'department': 'Cardiology', 'patient_condition_severity': 1, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 0, 'day_of_week': 6, 'hour': 11, 'queue_length': 7, 'queue_position': 1, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:05:57.261170', 'priority_score': 0.8, 'base_wait_time': 30.0, 'cumulative_delay': 10, 'predicted_wait_time': 40.0, 'notified_wait_time': 34.174018852175905}, {'patient_id': 4, 'name': 'Emily Davis', 'department': 'Cardiology', 'patient_condition_severity': 2, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 7, 'queue_position': 2, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:15:57.261170', 'priority_score': 1.6, 'base_wait_time': 21.0, 'cumulative_delay': 0, 'predicted_wait_time': 61.0, 'notified_wait_time': 51.13038102395342}, {'patient_id': 5, 'name': 'Robert Wilson', 'department': 'Emergency', 'patient_condition_severity': 2, 'status': 'completed', 'is_canceled': 0, 'is_follow_up': 0, 'day_of_week': 6, 'hour': 11, 'queue_length': 7, 'queue_position': 3, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 5, 'appointment_time': '2025-03-23T12:25:57.261170', 'priority_score': 1.6, 'base_wait_time': 15.0, 'cumulative_delay': 0, 'predicted_wait_time': 76.0, 'notified_wait_time': 66.99568947087715}, {'patient_id': 2, 'name': 'Sarah Johnson', 'department': 'Emergency', 'patient_condition_severity': 3, 'status': 'in-progress', 'is_canceled': 0, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 7, 'queue_position': 4, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 5, 'appointment_time': '2025-03-23T11:55:57.261170', 'priority_score': 2.4000000000000004, 'base_wait_time': 10.5, 'cumulative_delay': 0, 'predicted_wait_time': 86.5, 'notified_wait_time': 79.43266856316774}, {'patient_id': 6, 'name': 'Jennifer Lee', 'department': 'Emergency', 'patient_condition_severity': 4, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 7, 'queue_position': 6, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 5, 'appointment_time': '2025-03-23T12:35:57.261170', 'priority_score': 3.2, 'base_wait_time': 10.5, 'cumulative_delay': 0, 'predicted_wait_time': 97.0, 'notified_wait_time': 90.99663421598261}, {'patient_id': 7, 'name': 'David Miller', 'department': 'General Practice', 'patient_condition_severity': 1, 'status': 'waiting', 'is_canceled': 0, 'is_follow_up': 0, 'day_of_week': 6, 'hour': 11, 'queue_length': 7, 'queue_position': 7, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:45:57.261170', 'priority_score': 0.8, 'base_wait_time': 30.0, 'cumulative_delay': 0, 'predicted_wait_time': 127.0, 'notified_wait_time': 119.08442526934344}, {'patient_id': 8, 'name': 'Lisa Anderson', 'department': 'Dermatology', 'patient_condition_severity': 2, 'status': 'cancelled', 'is_canceled': 1, 'is_follow_up': 1, 'day_of_week': 6, 'hour': 11, 'queue_length': 7, 'queue_position': 8, 'doctors_available': 2, 'patient_age': 35, 'delay_factor': 0, 'doctor_experience': 5, 'historical_wait_time': 30, 'appointment_time': '2025-03-23T12:55:57.261170', 'priority_score': 1.6, 'base_wait_time': 21.0, 'cumulative_delay': 0, 'predicted_wait_time': 148.0, 'notified_wait_time': 140.0593121098771}]
+2025-03-23 11:38:07,375 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:07] "GET / HTTP/1.1" 200 -
+2025-03-23 11:38:26,966 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:26] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:38:26,976 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:26] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:38:26,984 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:26] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:38:26,987 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:26] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:38:26,990 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:26] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:38:26,993 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:26] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:38:26,996 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:26] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:38:26,999 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:26] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:38:57,895 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:57] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:38:57,905 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:57] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:38:57,907 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:57] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:38:57,910 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:57] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:38:57,912 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:57] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:38:57,914 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:57] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:38:57,915 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:57] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:38:57,917 - INFO - 127.0.0.1 - - [23/Mar/2025 11:38:57] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:39:28,889 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:28] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:39:28,897 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:28] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:39:28,903 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:28] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:39:28,905 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:28] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:39:28,908 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:28] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:39:28,910 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:28] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:39:28,913 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:28] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:39:28,915 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:28] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:39:59,890 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:59] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:39:59,901 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:59] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:39:59,906 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:59] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:39:59,909 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:59] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:39:59,913 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:59] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:39:59,918 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:59] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:39:59,922 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:59] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:39:59,927 - INFO - 127.0.0.1 - - [23/Mar/2025 11:39:59] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:40:30,900 - INFO - 127.0.0.1 - - [23/Mar/2025 11:40:30] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:40:30,913 - INFO - 127.0.0.1 - - [23/Mar/2025 11:40:30] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:40:30,915 - INFO - 127.0.0.1 - - [23/Mar/2025 11:40:30] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:40:30,919 - INFO - 127.0.0.1 - - [23/Mar/2025 11:40:30] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:40:30,922 - INFO - 127.0.0.1 - - [23/Mar/2025 11:40:30] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:40:30,927 - INFO - 127.0.0.1 - - [23/Mar/2025 11:40:30] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:40:30,929 - INFO - 127.0.0.1 - - [23/Mar/2025 11:40:30] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:40:30,931 - INFO - 127.0.0.1 - - [23/Mar/2025 11:40:30] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:41:01,899 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:01] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:41:01,909 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:01] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:41:01,912 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:01] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:41:01,916 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:01] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:41:01,921 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:01] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:41:01,925 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:01] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:41:01,930 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:01] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:41:01,934 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:01] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:41:32,905 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:32] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:41:32,918 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:32] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:41:32,921 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:32] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:41:32,927 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:32] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:41:32,931 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:32] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:41:32,941 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:32] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:41:32,941 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:32] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:41:32,945 - INFO - 127.0.0.1 - - [23/Mar/2025 11:41:32] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:42:03,892 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:03] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:42:03,901 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:03] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:42:03,904 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:03] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:42:03,907 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:03] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:42:03,910 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:03] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:42:03,912 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:03] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:42:03,915 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:03] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:42:03,919 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:03] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:42:34,900 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:34] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:42:34,913 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:34] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:42:34,916 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:34] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:42:34,921 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:34] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:42:34,926 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:34] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:42:34,933 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:34] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:42:34,977 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:34] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:42:34,981 - INFO - 127.0.0.1 - - [23/Mar/2025 11:42:34] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:43:05,895 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:05] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:43:05,905 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:05] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:43:05,908 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:05] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:43:05,912 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:05] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:43:05,915 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:05] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:43:05,916 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:05] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:43:05,919 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:05] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:43:05,922 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:05] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:43:36,891 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:36] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:43:36,902 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:36] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:43:36,906 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:36] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:43:36,910 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:36] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:43:36,913 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:36] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:43:36,917 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:36] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:43:36,924 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:36] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:43:36,928 - INFO - 127.0.0.1 - - [23/Mar/2025 11:43:36] "GET /api/patient/8 HTTP/1.1" 200 -
+2025-03-23 11:44:07,894 - INFO - 127.0.0.1 - - [23/Mar/2025 11:44:07] "GET /api/queue HTTP/1.1" 200 -
+2025-03-23 11:44:07,906 - INFO - 127.0.0.1 - - [23/Mar/2025 11:44:07] "GET /api/patient/3 HTTP/1.1" 200 -
+2025-03-23 11:44:07,910 - INFO - 127.0.0.1 - - [23/Mar/2025 11:44:07] "GET /api/patient/4 HTTP/1.1" 200 -
+2025-03-23 11:44:07,914 - INFO - 127.0.0.1 - - [23/Mar/2025 11:44:07] "GET /api/patient/5 HTTP/1.1" 200 -
+2025-03-23 11:44:07,920 - INFO - 127.0.0.1 - - [23/Mar/2025 11:44:07] "GET /api/patient/2 HTTP/1.1" 200 -
+2025-03-23 11:44:07,926 - INFO - 127.0.0.1 - - [23/Mar/2025 11:44:07] "GET /api/patient/6 HTTP/1.1" 200 -
+2025-03-23 11:44:07,931 - INFO - 127.0.0.1 - - [23/Mar/2025 11:44:07] "GET /api/patient/7 HTTP/1.1" 200 -
+2025-03-23 11:44:07,936 - INFO - 127.0.0.1 - - [23/Mar/2025 11:44:07] "GET /api/patient/8 HTTP/1.1" 200 -
